@@ -8,11 +8,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
-	Texture img;
+	Texture goblinImage;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		goblinImage = new Texture("goblin.jpg");
 	}
 
 	@Override
@@ -20,8 +21,8 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
+		batch.draw(goblinImage, 800/2 - goblinImage.getWidth()/2, 480/2 - goblinImage.getHeight()/2);
 		batch.end();
-		//blablablablablabla und so
 	}
 	
 	@Override
